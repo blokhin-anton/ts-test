@@ -2,5 +2,6 @@ export enum actionTypes {
   CREATE = '@ARTICLE/CREATE',
   UPDATE = '@ARTICLE/UPDATE',
   DELETE = '@ARTICLE/DELETE',
-  ADD = '@ARTICLE/ADD'
+  ADD = '@ARTICLE/ADD',
+  SEND = '@ARTICLE/SEND'
 }

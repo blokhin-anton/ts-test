@@ -3,5 +3,6 @@ export default interface IArticle {
   title: string,
   shortContent: string,
   content: string,
-  tags: Array<string>
+  tags: Array<string>,
+  autors: Array<{id: string, fullName: string}>
 }
