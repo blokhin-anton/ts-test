@@ -1,0 +1,31 @@
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  @extend .full;
+  margin: 0;
+  padding: 0;
+}
+
+$headerContainerHeight: 100px;
+$footerContainerHeight: 100px;
+
+.headerContainer {
+  @extend .full;
+  height: $headerContainerHeight;
+  background-color: brown;
+}
+
+.contentContainer {
+  @extend .full;
+  height: calc(100% - #{$headerContainerHeight} - #{$footerContainerHeight});
+  background-color: antiquewhite;
+}
+
+.footerContainer {
+  @extend .full;
+  height: $footerContainerHeight;
+  background-color: aqua;
+}

@@ -1,23 +1,25 @@
-import React from 'react';
+import React, {ComponentClass, FunctionComponent} from 'react';
 
 import styles from './styles.scss';
 
-const Header = (className: any) => {
-  return <div/>
+const Header = (props: any) => {
+  return <div {...props}/>
 }
 
-const Footer = () => {
-  return <div/>
+const Footer = (props: any) => {
+  return <div {...props}/>
 }
 
-export default (Content: React.Component) => {
-  return (
-    <>
-      <Header className={styles.headerContainer} />
-      <div>
-        {Content}
-      </div>
-      <Footer/>
-    </>
-  );
+export default class Template extends React.Component {
+  render() {
+    return (
+      <>
+        <Header className={styles.headerContainer} />
+        <div className={styles.contentContainer}>
+          {this.props.children}
+        </div>
+        <Footer className={styles.footerContainer}/>
+      </>
+    )
+  };
 }
