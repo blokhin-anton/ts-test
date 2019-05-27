@@ -11,6 +11,7 @@ interface ITag {
 
 interface IProps {
   id: string,
+  blockClassName?: string,
   title: string,
   previewImage?: string,
   previewText: string
@@ -32,28 +33,30 @@ const Tag = (tag: any) => {
 
 export default (props: IProps) => {
   return(
-    <div className={styles.shortBlock}>
-      <div className={styles.shortBlockTitle}>
-        <h2>
-          <Link to={`news/${props.title}`}>
-            {props.title}
-          </Link>
-        </h2>
-      </div>
-      <div className={styles.shortBlockContent}>
-        <div className={styles.shortBlockContentImage}>
-          {props.previewImage && <Image image={props.previewImage} />}
+    <div className={props.blockClassName || styles.shortBlock}>
+      <div className={styles.shortBlock}>
+        <div className={styles.shortBlockTitle}>
+          <h2>
+            <Link to={`news/${props.title}`}>
+              {props.title}
+            </Link>
+          </h2>
         </div>
-        <div className={styles.shortBlockContentText}>
-          <Text text={props.previewText}/>
+        <div className={styles.shortBlockContent}>
+          <div className={styles.shortBlockContentImage}>
+            {props.previewImage && <Image image={props.previewImage} />}
+          </div>
+          <div className={styles.shortBlockContentText}>
+            <Text text={props.previewText}/>
+          </div>
         </div>
-      </div>
-      <div className={styles.shortBlockTagsPanel}>
-        { 
-          props.tags.map(
-            (tag) => <Tag kay={tag.id} tag={tag}/>
-          )
-        }
+        <div className={styles.shortBlockTagsPanel}>
+          { 
+            props.tags.map(
+              (tag) => <Tag kay={tag.id} tag={tag}/>
+            )
+          }
+        </div>
       </div>
     </div>
   );
