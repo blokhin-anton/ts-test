@@ -7,9 +7,12 @@ $item: 100%/$elementCountInLine;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
 }
 
 .groupElement {
+  min-height: 300px;
   padding-left: calc(#{$paddingbetweenNews}/2);
   padding-right: calc(#{$paddingbetweenNews}/2);
   width: calc(#{$item}-#{$paddingbetweenNews});

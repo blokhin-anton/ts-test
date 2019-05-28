@@ -39,7 +39,7 @@ const testData = [
   },
   {
     id: '4',
-    title: 'title_4 title_1title_1title_1title 1title_1title_1title_1title 1title_1title_1title_1title_1title 1title_1title_1title_1title_1title_1title_1title_1title_1',
+    title: 'title_4',
     previewText: 'string',
     tags: [
       {
@@ -51,12 +51,14 @@ const testData = [
 ]
 
 export const MainPage = () => {
-  return <div className={styles.group}>
-    {
-      testData.map(
-        (news) => <ShortHews key={news.id} blockClassName={styles.groupElement} {...news}/>
-      )
-    }
-  </div>
+  return (
+    <div className={styles.group}>
+      {
+        testData.map(
+          (news) => <ShortHews key={news.id} blockClassName={styles.groupElement} {...news}/>
+        )
+      }
+    </div>
+  );
   
 };

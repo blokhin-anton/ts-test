@@ -29,7 +29,7 @@ const Comment = (comment:any) => {
   return <div></div>;
 }
 
-export const FullHews = (props: IProps) => {
+export default (props: IProps) => {
   return(
     <div className={styles.fullBlock}>
       <div className={styles.fullBlockTitle}>

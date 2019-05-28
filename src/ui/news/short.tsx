@@ -37,7 +37,7 @@ export default (props: IProps) => {
       <div className={styles.shortBlock}>
         <div className={styles.shortBlockTitle}>
           <h2>
-            <Link to={`news/${props.title}`}>
+            <Link to={`article/${props.id}`}>
               {props.title}
             </Link>
           </h2>
