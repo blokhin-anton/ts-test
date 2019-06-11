@@ -14,6 +14,12 @@ export const routes: IRoute[] = [
     path: '/article/:id',
     isExact: true,
     component: pages.Article
+  },
+  {
+    name: 'Tag',
+    path: '/tag/:id',
+    isExact: true,
+    component: pages.Article
   },  
   {
     name: 'Not Found',

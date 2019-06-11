@@ -25,7 +25,14 @@
     //for alias
     "baseUrl": "./",
     "paths": {
-      "src/*": ["src/*"]
+      "src/*": ["src/*"],
+      "@ui/*": ["src/ui/*"],
+      "@store/*": ["src/store/reducer/*"],
+      "@action": ["src/store/reducers/actionType.ts"],
+      "@pages/*": ["src/pages/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@components": ["src/components/*"],
+      "@links": ["src/routes/links.tsx"],
     },
     "typeRoots": [
       "./node_modules/@types",
